@@ -2,6 +2,7 @@
     <div @click="show">this is {{count}} login {{fullName}}
 
         <p>{{countSelf}}</p>
+        <p>{{textA}} {{textB}} {{textAA}}</p>
     </div>
 
 </template>
@@ -35,6 +36,9 @@
             ...mapState({
                 countSelf:(state)=>{
                     return state.count
+                },
+                textAA:(state)=>{
+                    return state.a.text
                 }
             }),
             ...mapGetters(['fullNames']),
@@ -44,6 +48,12 @@
             },
             fullName(){
                 return this.$store.getters.fullName
+            },
+            textA(){
+                return this.$store.state.a.text
+            },
+            textB(){
+                return this.$store.state.b.text
             }
         },
         methods:{

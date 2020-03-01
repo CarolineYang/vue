@@ -11,6 +11,18 @@ export default ()=>{
         //修改
         mutations,
         getters,
-        actions
+        actions,
+        modules:{
+            a:{
+                state:{
+                    text:1
+                }
+            },
+            b:{
+                state:{
+                    text:2
+                }
+            }
+        }
     })
 }
