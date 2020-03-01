@@ -13,9 +13,15 @@ export default ()=>{
         getters,
         actions,
         modules:{
+            namespaced:true,
             a:{
                 state:{
                     text:1
+                },
+                mutations:{
+                    updateText(state,text){
+
+                    }
                 }
             },
             b:{
