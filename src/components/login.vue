@@ -18,13 +18,13 @@
             //可以直接在外部修改vuex的数据但是不建议这么做 不规范
             // this.$store.state.count=80;
             //触发actions里的操作
-            this.$store.dispatch('updateCountAsync',10000);
-            // let i=1;
-            // setInterval(()=>{
-            //     //修改store里的数据
-            //     this.$store.commit('updateCount',i++);
-            //
-            // },1000)
+            // this.$store.dispatch('updateCountAsync',10000);
+            let i=1;
+            setInterval(()=>{
+                //修改store里的数据
+                this.$store.commit('updateCount',i++);
+
+            },1000)
             setTimeout(()=>{
                 //修改store里的数据
                 this.$store.commit('updateName',{text:'ypp'});
