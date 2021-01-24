@@ -8,7 +8,7 @@ export default [
         redirect:'/hello'
     },
     {
-        path:'/hello',
+        path:'/hello/:id',
         component:HelloWorld,
         name:'hello'
 

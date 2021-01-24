@@ -48,6 +48,9 @@
             }
 
         },
+        beforeCreate() {
+            console.log('我是login')
+        },
         mounted(){
             console.log('login',this.id);
             //调用 store
